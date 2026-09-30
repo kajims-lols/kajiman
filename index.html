@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devine Fasco Kost - Hunian Nyaman & Strategis di Taman Fasco Tangsel</title>
+    <meta name="description" content="Sewa kost nyaman di Taman Fasco, Ciputat, Tangerang Selatan. Kamar Standard Rp 850rb/bln & Kamar AC Rp 1.2jt/bln. Include kasur, lemari, meja lipat, wastafel & air.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        emerald: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        },
+                        amber: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-color: #fcfbf9;
+            background-image: radial-gradient(#10b981 0.75px, transparent 0.75px), radial-gradient(#f59e0b 0.75px, #fcfbf9 0.75px);
+            background-size: 28px 28px;
+            background-position: 0 0, 14px 14px;
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-slate-800 flex flex-col min-h-screen relative antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-amber-100 shadow-xs transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-600 to-amber-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-house-chimney text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight block leading-none">Devine Fasco</span>
+                    <span class="text-[11px] font-semibold text-emerald-600 tracking-wider uppercase">Kost Taman Fasco</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#pilihan-kamar" class="hover:text-emerald-600 transition">Pilihan Kamar</a>
+                <a href="#fasilitas" class="hover:text-emerald-600 transition">Fasilitas</a>
+                <a href="#galeri" class="hover:text-emerald-600 transition">Galeri Foto</a>
+                <a href="#lokasi" class="hover:text-emerald-600 transition">Lokasi</a>
+            </nav>
+
+            <a href="https://wa.me/62816946283?text=Halo%20Devine%20Fasco%20Kost,%20saya%20tertarik%20tanya%20ketersediaan%20kamar" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 sm:px-5 py-2.5 rounded-2xl text-sm transition shadow-lg shadow-emerald-600/25 flex items-center gap-2 transform active:scale-95">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Hubungi</span> WA
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative hero-pattern pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+                
+                <!-- Hero Text & Offers -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-100 to-amber-100 text-slate-800 text-xs sm:text-sm font-bold px-4 py-2 rounded-full border border-emerald-200 shadow-xs">
+                        <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+                        <i class="fa-solid fa-location-dot text-emerald-600"></i> Taman Fasco B2 No.47, Ciputat, Tangsel
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 leading-tight">
+                        Hunian Kost Nyaman, Bersih & Terjangkau di <span class="gradient-text">Taman Fasco</span>
+                    </h1>
+
+                    <p class="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+                        Nikmati kamar kost siap huni dengan fasilitas lengkap: Kasur, Lemari, Meja Lipat, Wastafel pribadi, dan <strong class="text-emerald-700 font-bold">Termasuk Air (Free Air)</strong>.
+                    </p>
+
+                    <!-- Quick Pricing Cards Banner -->
+                    <div class="pt-2 flex flex-wrap gap-3 justify-center lg:justify-start">
+                        <div class="bg-white px-4 py-3 rounded-2xl border border-stone-200 shadow-xs flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-fan"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[10px] text-slate-500 font-extrabold uppercase tracking-wider">Kamar Standard</p>
+                                <p class="text-base font-extrabold text-slate-900">Rp 850.000 <span class="text-xs font-normal text-slate-500">/bln</span></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white px-4 py-3 rounded-2xl border border-amber-300 shadow-xs flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[10px] text-amber-600 font-extrabold uppercase tracking-wider">Unit Ber-AC</p>
+                                <p class="text-base font-extrabold text-slate-900">Rp 1.200.000 <span class="text-xs font-normal text-slate-500">/bln</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/62816946283?text=Halo%20Devine%20Fasco%20Kost,%20saya%20mau%20tanya%20ketersediaan%20dan%20survei%20kamar" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-7 py-4 rounded-2xl transition shadow-xl shadow-emerald-600/30 flex items-center justify-center gap-3 text-base group transform hover:-translate-y-0.5">
+                            <i class="fa-brands fa-whatsapp text-2xl group-hover:scale-110 transition-transform"></i>
+                            Tanya & Booking via WA
+                        </a>
+                        <a href="https://maps.app.goo.gl/9fqtwK12jopHyed57" target="_blank" class="bg-white hover:bg-stone-100 text-slate-800 font-semibold px-6 py-4 rounded-2xl border border-slate-200 transition text-center shadow-xs flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-map-location-dot text-amber-500"></i>
+                            Lihat Rute Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image Showcase (Direct Image nY6PzLg) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200 group cursor-pointer" onclick="openLightbox('https://iili.io/nY6PzLg.md.jpg', 'Tampak Depan Devine Fasco Kost')">
+                            <img src="https://iili.io/nY6PzLg.md.jpg" alt="Devine Fasco Kost Tampak Depan" class="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-5 left-5 right-5 text-white">
+                                <span class="bg-amber-500 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider inline-block mb-1">Foto Asli</span>
+                                <p class="text-lg font-extrabold leading-snug">Halaman & Tampak Depan Kos</p>
+                                <p class="text-xs text-slate-200 mt-0.5">Lingkungan tenang, asri, dan aman di Taman Fasco</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-4 -right-2 bg-white p-3.5 rounded-2xl shadow-xl border border-amber-100 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-900">Include Air!</p>
+                                <p class="text-[10px] text-slate-500">Bebas biaya pemakaian air</p>
+                            </div>
+                        </div>
+
+                        <div class="absolute -bottom-5 -left-2 bg-white p-3.5 rounded-2xl shadow-xl border border-emerald-100 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-900">Lokasi Strategis</p>
+                                <p class="text-[10px] text-slate-500">Serua, Ciputat - Tangsel</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Options & Pricing Section -->
+    <section id="pilihan-kamar" class="py-20 bg-white relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="bg-amber-100 text-amber-800 text-xs font-extrabold px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                    Pilihan Paket Kamar
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+                    Sewa Bulanan Transparan Tanpa Biaya Tersembunyi
+                </h2>
+                <p class="text-slate-600 mt-3 text-base">
+                    Pilih tipe kamar sesuai kebutuhan dan budget Anda. Semua unit siap pakai!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+                
+                <!-- Package 1: Kamar Standard Non-AC (850k) -->
+                <div class="bg-stone-50 rounded-3xl border-2 border-slate-200 p-8 flex flex-col justify-between hover:border-emerald-500 transition-all duration-300 shadow-sm hover:shadow-xl relative group">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-slate-200 text-slate-700 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tipe Standard</span>
+                                <h3 class="text-2xl font-bold text-slate-900 mt-2">Kamar Non-AC</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-slate-200/80 text-slate-700 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-fan"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-slate-500 text-sm mb-6">Pilihan hemat, bersih, dan praktis dengan perabotan lengkap.</p>
+
+                        <div class="mb-6 pb-6 border-b border-slate-200">
+                            <span class="text-4xl font-black text-slate-900">Rp 850.000</span>
+                            <span class="text-slate-500 text-sm font-medium">/ bulan</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-slate-700 text-sm font-medium mb-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                <span>Kasur Nyaman & Siap Pakai</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                <span>Lemari Pakaian Pribadi</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                <span>Meja Lipat Belajar / Kerja</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                <span>Wastafel Pribadi Dalam Kamar</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-500 text-lg"></i>
+                                <span class="font-bold text-slate-900">Sudah Termasuk Air (Free Air)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/62816946283?text=Halo%20Devine%20Fasco%20Kost,%20saya%20berminat%20sewa%20Kamar%20Standard%20Rp%20850.000/bulan" target="_blank" class="w-full text-center bg-slate-900 hover:bg-emerald-600 text-white font-bold py-4 rounded-2xl transition shadow-md flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Pesan Kamar Standard
+                    </a>
+                </div>
+
+                <!-- Package 2: Kamar AC Premium (1.200k) -->
+                <div class="bg-gradient-to-b from-emerald-950 via-slate-900 to-slate-900 text-white rounded-3xl border-2 border-emerald-400 p-8 flex flex-col justify-between shadow-2xl relative transform lg:-translate-y-2">
+                    <span class="absolute -top-4 right-8 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md">
+                        🔥 Paling Favorit
+                    </span>
+
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-emerald-800/80 text-emerald-200 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Unit Premium</span>
+                                <h3 class="text-2xl font-bold text-white mt-2">Kamar Ber-AC</h3>
+                            </div>
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl border border-emerald-500/30">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-emerald-100/80 text-sm mb-6">Sangat sejuk & tenang untuk kenyamanan istirahat maksimal.</p>
+
+                        <div class="mb-6 pb-6 border-b border-emerald-800">
+                            <span class="text-4xl font-black text-white">Rp 1.200.000</span>
+                            <span class="text-emerald-300 text-sm font-medium">/ bulan</span>
+                        </div>
+
+                        <ul class="space-y-3.5 text-emerald-100 text-sm font-medium mb-8">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-amber-400 text-lg"></i>
+                                <span class="font-bold text-white">Pendingin Ruangan (AC) Dingin</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                                <span>Kasur Nyaman & Empuk</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                                <span>Lemari Pakaian</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                                <span>Meja Lipat Belajar / Kerja</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                                <span>Wastafel Pribadi Dalam Kamar</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>
+                                <span class="font-bold text-amber-300">Sudah Termasuk Biaya Air</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/62816946283?text=Halo%20Devine%20Fasco%20Kost,%20saya%20berminat%20sewa%20Kamar%20AC%20Rp%201.200.000/bulan" target="_blank" class="w-full text-center bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-black py-4 rounded-2xl transition shadow-lg shadow-emerald-500/30 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        Pesan Kamar AC Sekarang
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Grid Section -->
+    <section id="fasilitas" class="py-20 bg-stone-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14">
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                    Fasilitas Kamar & Gedung
+                </span>
+                <h2 class="text-3xl font-extrabold text-slate-900">
+                    Fasilitas Lengkap Siap Huni
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">
+                    Semua yang Anda butuhkan untuk kehidupan sehari-hari sudah tersedia dengan baik.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+                <!-- Kasur -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 text-center hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Kasur Empuk</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Sudah Termasuk</p>
+                </div>
+
+                <!-- Lemari -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 text-center hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-door-closed"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Lemari Pakaian</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Sudah Termasuk</p>
+                </div>
+
+                <!-- Meja Lipat -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 text-center hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Meja Lipat</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Kerja / Belajar</p>
+                </div>
+
+                <!-- Wastafel -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 text-center hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-sink"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Wastafel</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Di Dalam Kamar</p>
+                </div>
+
+                <!-- Free Air -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 text-center hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Gratis Air</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Include Air</p>
+                </div>
+
+                <!-- AC Unit -->
+                <div class="bg-white p-5 rounded-2xl border border-stone-200 text-center hover:shadow-md transition group">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-2xl flex items-center justify-center mx-auto mb-3 text-xl group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-800 text-sm">Opsi AC</h4>
+                    <p class="text-[11px] text-slate-500 mt-0.5">Tipe Premium</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section (All 7 Exact Images) -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                        Galeri Real Foto
+                    </span>
+                    <h2 class="text-3xl font-extrabold text-slate-900">
+                        Foto Asli Lokasi & Kamar Kos
+                    </h2>
+                </div>
+                <p class="text-slate-500 text-sm mt-2 md:mt-0 italic">
+                    <i class="fa-solid fa-circle-info text-amber-500 mr-1"></i> Klik pada gambar untuk memperbesar foto.
+                </p>
+            </div>
+
+            <!-- 7 Direct Image Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Image 1: Halaman Depan Kos (nY6PzLg) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200" onclick="openLightbox('https://iili.io/nY6PzLg.md.jpg', 'Halaman Depan Kos (Tampak Luar)')">
+                    <img src="https://iili.io/nY6PzLg.md.jpg" alt="Halaman Depan Kos" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Tampak Luar</p>
+                            <p class="text-sm font-bold">Halaman Depan Kos</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- Image 2: Halaman Kos / Area Luar (nY6PFrx) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200" onclick="openLightbox('https://iili.io/nY6PFrx.md.jpg', 'Halaman Kos & Area Luar')">
+                    <img src="https://iili.io/nY6PFrx.md.jpg" alt="Halaman Kos" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Area Kos</p>
+                            <p class="text-sm font-bold">Halaman & Koridor</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- Image 3: Kamar Lengkap (nY6P31j) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200" onclick="openLightbox('https://iili.io/nY6P31j.md.jpg', 'Interior Kamar (Kasur, Lemari, AC)')">
+                    <img src="https://iili.io/nY6P31j.md.jpg" alt="Gambar Kamar Lengkap" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Kamar Lengkap</p>
+                            <p class="text-sm font-bold">Terlihat Kasur, Lemari & AC</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- Image 4: Kasur (nY6PCmP) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200" onclick="openLightbox('https://iili.io/nY6PCmP.md.jpg', 'Fasilitas Kasur Nyaman')">
+                    <img src="https://iili.io/nY6PCmP.md.jpg" alt="Kasur Kos" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Fasilitas Kamar</p>
+                            <p class="text-sm font-bold">Kasur Empuk & Bersih</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- Image 5: Lemari (nY6PxhF) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200" onclick="openLightbox('https://iili.io/nY6PxhF.md.jpg', 'Lemari Pakaian dalam Kamar')">
+                    <img src="https://iili.io/nY6PxhF.md.jpg" alt="Lemari Pakaian" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Fasilitas Kamar</p>
+                            <p class="text-sm font-bold">Lemari Pakaian</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- Image 6: Wastafel (nY6P2qb) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200" onclick="openLightbox('https://iili.io/nY6P2qb.md.jpg', 'Fasilitas Wastafel Pribadi')">
+                    <img src="https://iili.io/nY6P2qb.md.jpg" alt="Wastafel Kos" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Fasilitas Dalam</p>
+                            <p class="text-sm font-bold">Wastafel Pribadi</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+                <!-- Image 7: Toilet / Kamar Mandi (nY6PfdQ) -->
+                <div class="relative group rounded-3xl overflow-hidden shadow-md bg-stone-100 aspect-4/3 cursor-pointer border border-stone-200 sm:col-span-2 lg:col-span-1" onclick="openLightbox('https://iili.io/nY6PfdQ.md.jpg', 'Kamar Mandi / Toilet')">
+                    <img src="https://iili.io/nY6PfdQ.md.jpg" alt="Toilet Kamar Mandi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                        <div>
+                            <p class="text-xs font-bold uppercase tracking-wider text-amber-300">Sanitasi</p>
+                            <p class="text-sm font-bold">Kamar Mandi / Toilet Bersih</p>
+                        </div>
+                        <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur flex items-center justify-center text-white"><i class="fa-solid fa-expand text-xs"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact Section -->
+    <section id="lokasi" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Location Details -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider border border-emerald-500/30">
+                        Lokasi Strategis Tangsel
+                    </span>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                        Devine Fasco Kost Taman Fasco
+                    </h2>
+
+                    <div class="space-y-4 text-stone-300 text-sm">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white">Alamat Lengkap:</p>
+                                <p class="text-stone-300 mt-0.5 leading-relaxed">
+                                    Jl. Taman Fasco B2 No.47, Serua, Kec. Ciputat, Kota Tangerang Selatan, Banten
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-400">Telepon / WhatsApp:</p>
+                                <a href="https://wa.me/62816946283" target="_blank" class="font-extrabold text-white text-base hover:text-emerald-400 transition">+62 816-946-283</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                        <a href="https://maps.app.goo.gl/9fqtwK12jopHyed57" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-slate-950 font-extrabold px-6 py-4 rounded-2xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20 text-sm">
+                            <i class="fa-solid fa-compass text-lg"></i>
+                            Buka Rute di Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embedded Preview -->
+                <div class="lg:col-span-7">
+                    <div class="rounded-3xl overflow-hidden border-2 border-slate-700 shadow-2xl h-80 sm:h-96 w-full relative bg-slate-800">
+                        <iframe 
+                            class="w-full h-full border-0"
+                            loading="lazy" 
+                            allowfullscreen 
+                            src="https://maps.google.com/maps?q=Devine%20Fasco%20Kost,%20Jl.%20Taman%20Fasco,%20Serua,%20Ciputat,%20Tangerang%20Selatan&t=&z=16&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp CTA Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <a href="https://wa.me/62816946283?text=Halo%20Devine%20Fasco%20Kost,%20saya%20ingin%20tanya%20ketersediaan%20kamar" target="_blank" class="flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-5 py-3.5 rounded-full shadow-2xl shadow-emerald-500/50 transform hover:scale-105 active:scale-95 transition">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            <span class="text-sm hidden sm:inline">Chat WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Lightbox Modal for Photo Viewing -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4 transition-opacity duration-300">
+        <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+            <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-amber-400 text-2xl font-bold bg-white/10 w-10 h-10 rounded-full flex items-center justify-center backdrop-blur transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl border border-slate-700">
+            <p id="lightbox-caption" class="text-white text-center font-bold text-base mt-4 bg-slate-900/80 px-6 py-2 rounded-full border border-slate-700"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-8 text-xs border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <div class="flex items-center gap-2 text-white font-bold text-sm">
+                <i class="fa-solid fa-house-chimney text-emerald-400"></i>
+                <span>Devine Fasco Kost</span>
+            </div>
+            <p>&copy; 2026 Dhimas wahyu was made this website. All rights reserved.</p>
+            <p class="text-slate-400"><i class="fa-solid fa-phone text-emerald-400 mr-1"></i> +62 816-946-283</p>
+        </div>
+    </footer>
+
+    <script>
+        // Interactive Lightbox Functions
+        function openLightbox(imageUrl, caption) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const captionElem = document.getElementById('lightbox-caption');
+
+            img.src = imageUrl;
+            captionElem.textContent = caption;
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('modal-active');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('modal-active');
+        }
+
+        // Close Lightbox on Click Outside
+        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape key press
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
